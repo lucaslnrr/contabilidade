@@ -5,11 +5,12 @@ import csvtojson from 'csvtojson';
 import xlsx from 'xlsx';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
-
+import cors from 'cors';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const app = express();
+app.use(cors());
 const port = 3000;
 
 // Set up multer for file upload
