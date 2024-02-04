@@ -51,3 +51,4 @@ app.post('/upload', upload.single('csvFile'), async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
+module.exports = app;
